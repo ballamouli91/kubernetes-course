@@ -13,7 +13,8 @@ sudo mv linux-amd64/helm /usr/local/bin/helm
 kubectl create -f helm-rbac.yaml
 helm init --service-account tiller
 ```
-
+## verify the tiller pod has deployed as part of hel iinit cmand
+kubectl get pods -n kube-system
 ## Setup S3 helm repository
 Make sure to set the default region in setup-s3-helm-repo.sh
 ```
